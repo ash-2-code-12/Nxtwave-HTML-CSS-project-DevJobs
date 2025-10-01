@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevJobs - Tech Job Listings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 font-inter text-gray-800">
+
+    <header class="page-top-bar">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="main-page-title">DevJobs</h1>
+            <nav>
+                <ul class="flex space-x-6 nav-list">
+                    <li>
+                        <a href="#" class="nav-link" style="margin-right: 18px;">Post a Job </a>
+                        <a href="#" class="nav-link">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-8 px-4">
+        
+        <div id="browse-view">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                
+                <aside class="lg:col-span-1 filter-box">
+                    <h2 class="filter-box-heading">Find a Job</h2>
+
+                    <div class="mb-6">
+                        <label for="role-filter" class="form-label-style">Role</label>
+                        <select id="role-filter" class="form-input-style">
+                            <option value="all">Any Role</option>
+                            <option value="Frontend Developer">Frontend Developer</option>
+                            <option value="Backend Developer">Backend Developer</option>
+                            <option value="Fullstack Developer">Fullstack Developer</option>
+                            <option value="DevOps Engineer">DevOps Engineer</option>
+                            <option value="UX Designer">UX Designer</option>
+                            <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                            <option value="Data Scientist">Data Scientist</option>
+                            <option value="Mobile Developer">Mobile Developer</option>
+                            <option value="Cloud Architect">Cloud Architect</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="form-label-style">Tech Stack</label>
+                        <div id="tech-stack-chips" class="flex flex-wrap gap-2">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="location-filter" class="form-label-style">Location</label>
+                        <input type="text" id="location-filter" class="form-input-style" placeholder="e.g., San Francisco">
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="experience-filter" class="form-label-style">Experience Level</label>
+                        <select id="experience-filter" class="form-input-style">
+                            <option value="all">Any Level</option>
+                            <option value="entry">Entry/Internship</option>
+                            <option value="junior">Junior (1-2 years)</option>
+                            <option value="mid">Mid-Level (2-4 years)</option>
+                            <option value="mid-senior">Mid-Senior (4-6 years)</option>
+                            <option value="senior">Senior/Lead (7+ years)</option>
+                        </select>
+                    </div>
+                </aside>
+
+                <section class="lg:col-span-3">
+                    <div id="jobBoardDisplay" class="job-container">
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
